@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外壁洗浄専門店 鹿児島LOOPZ｜塗り替えの前に「洗う」という選択</title>
+<meta name="description" content="外壁洗浄専門店 鹿児島LOOPZ（ループス）。カビ・コケ・藻・雨染みなどの外壁汚れを、外壁材にあわせた専用洗浄液とていねいな手洗い施工でしっかり除去。塗り替えに比べて費用を大幅に抑えながら、住まいを新築のような美しさへ。お見積りは無料です。">
+<style>
+:root{
+  --blue:#3165af;
+  --lblue:#00b9ef;
+  --bg-lb:#b2eafa;
+  --yellow:#fff226;
+  --dark:#333333;
+  --white:#ffffff;
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{
+  font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;
+  color:var(--dark);
+  background:var(--white);
+  line-height:1.8;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+section{padding:80px 5%;position:relative;}
+.inner{max-width:1080px;margin:0 auto;}
+
+/* ===== 共通見出し ===== */
+.sec-label{
+  display:block;
+  font-family:"Montserrat","Arial",sans-serif;
+  font-weight:800;
+  font-size:clamp(11px,1.4vw,14px);
+  letter-spacing:.25em;
+  color:var(--lblue);
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.sec-title{
+  font-size:clamp(24px,4.2vw,38px);
+  font-weight:800;
+  line-height:1.4;
+  margin-bottom:24px;
+}
+.sec-title .marker{
+  background:linear-gradient(transparent 62%,var(--yellow) 62%);
+  padding:0 2px;
+}
+
+/* ===== スクロールリビール ===== */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.on{opacity:1;transform:none;}
+.reveal.d1{transition-delay:.12s}
+.reveal.d2{transition-delay:.24s}
+.reveal.d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  *{animation-duration:.01s !important;}
+}
+
+/* ===== ヘッダー ===== */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 5%;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  box-shadow:0 1px 12px rgba(49,101,175,.12);
+  transition:transform .35s ease;
+}
+header.hide{transform:translateY(-110%);}
+.logo{display:flex;align-items:center;gap:10px;line-height:1.2;}
+.logo-img{width:42px;height:42px;border-radius:10px;object-fit:cover;}
+.logo .en,.logo .ja{align-self:auto;}
+.logo .en{
+  font-family:"Montserrat","Arial",sans-serif;
+  font-weight:800;font-size:24px;color:var(--blue);letter-spacing:.06em;
+}
+.logo .en span{color:var(--lblue);}
+.logo .ja{font-size:11px;font-weight:700;color:var(--dark);}
+nav.pc{display:flex;gap:26px;align-items:center;}
+nav.pc a{font-size:14px;font-weight:700;position:relative;padding:4px 0;}
+nav.pc a::after{
+  content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;
+  background:var(--lblue);transform:scaleX(0);transform-origin:right;transition:transform .3s;
+}
+nav.pc a:hover::after{transform:scaleX(1);transform-origin:left;}
+.cta-btn{
+  display:inline-block;
+  background:var(--yellow);color:var(--dark);
+  font-weight:800;font-size:14px;
+  padding:12px 22px;border-radius:999px;
+  box-shadow:0 4px 0 rgba(0,0,0,.15);
+  animation:pulse 1.8s infinite;
+  transition:filter .2s;
+}
+.cta-btn:hover{filter:brightness(1.05);}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.07)}100%{transform:scale(1)}}
+.hamburger{
+  display:none;width:44px;height:44px;border:none;background:transparent;cursor:pointer;z-index:120;position:relative;
+}
+.hamburger span{
+  position:absolute;left:10px;width:24px;height:2.5px;background:var(--blue);border-radius:2px;transition:.3s;
+}
+.hamburger span:nth-child(1){top:14px}
+.hamburger span:nth-child(2){top:21px}
+.hamburger span:nth-child(3){top:28px}
+body.menu-open .hamburger span:nth-child(1){top:21px;transform:rotate(45deg);}
+body.menu-open .hamburger span:nth-child(2){opacity:0;}
+body.menu-open .hamburger span:nth-child(3){top:21px;transform:rotate(-45deg);}
+.sp-menu{
+  position:fixed;inset:0;z-index:110;
+  background:linear-gradient(160deg,var(--blue),var(--lblue));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+  opacity:0;pointer-events:none;transition:opacity .35s;
+}
+body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
+.sp-menu a{color:#fff;font-size:18px;font-weight:800;letter-spacing:.05em;}
+.sp-menu .cta-btn{color:var(--dark);}
+
+/* ===== ヒーロー ===== */
+.hero{
+  position:relative;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;align-items:center;
+  background:linear-gradient(165deg,#55d5f6 0%,#2ec7f1 50%,#00b9ef 100%);
+  padding:120px 5% 140px;
+  overflow:hidden;
+}
+.hero-inner{max-width:1080px;margin:0 auto;width:100%;position:relative;z-index:2;}
+.hero-copy .lead-en{
+  font-family:"Montserrat","Arial",sans-serif;
+  font-weight:800;letter-spacing:.2em;font-size:clamp(11px,1.6vw,15px);
+  color:#fff;margin-bottom:14px;
+}
+.hero-title{
+  font-size:clamp(30px,6vw,58px);
+  font-weight:900;line-height:1.35;color:#15191c;
+}
+.hero-title .line{display:block;overflow:hidden;}
+.hero-title .line span{display:inline-block;transform:translateY(110%);animation:riseUp .9s cubic-bezier(.2,.7,.2,1) forwards;}
+.hero-title .line:nth-child(2) span{animation-delay:.25s;}
+.hero-title .blue{color:#fff;text-shadow:0 2px 10px rgba(18,84,130,.25);}
+.hero-title .wave{
+  background:linear-gradient(transparent 60%,var(--yellow) 60%);
+}
+@keyframes riseUp{to{transform:translateY(0);}}
+.hero-sub{
+  margin-top:22px;font-size:clamp(14px,2vw,17px);font-weight:700;color:#0e4c6d;
+  opacity:0;animation:fadeIn 1s ease .7s forwards;
+}
+.hero-logo{
+  position:absolute;right:4%;top:50%;transform:translateY(-50%);
+  width:clamp(180px,24vw,320px);border-radius:24px;
+  box-shadow:0 18px 44px rgba(10,80,120,.30);
+  animation:logoBob 3.4s ease-in-out infinite alternate;z-index:2;
+}
+@keyframes logoBob{from{transform:translateY(-54%)}to{transform:translateY(-46%)}}
+@media(max-width:840px){.hero-logo{display:none;}}
+.hero-badges{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;
+  opacity:0;animation:fadeIn 1s ease .95s forwards;
+}
+.hero-badges .badge{
+  background:var(--white);color:var(--blue);
+  border:2px solid var(--blue);
+  font-size:13px;font-weight:800;
+  padding:8px 16px;border-radius:999px;
+}
+.hero-cta{
+  margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;
+  opacity:0;animation:fadeIn 1s ease 1.15s forwards;
+}
+.hero-cta .cta-btn{font-size:16px;padding:16px 34px;}
+.hero-cta .ghost{
+  display:inline-block;font-weight:800;font-size:15px;
+  color:var(--blue);border:2px solid #fff;border-radius:999px;
+  padding:14px 30px;background:rgba(255,255,255,.85);transition:background .2s;
+}
+.hero-cta .ghost:hover{background:#fff;}
+@keyframes fadeIn{to{opacity:1;}}
+/* 泡 */
+.bubbles{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.bubble{
+  position:absolute;bottom:-120px;
+  border-radius:50%;
+  background:#ffffff;
+  animation:floatUp linear infinite;
+}
+/* ロゴと同じ、重なりが淡い黄色に見える泡 */
+.bubble.tint{
+  background:radial-gradient(circle at 63% 63%,#f6f1c3 0%,#f6f1c3 30%,#ffffff 36%);
+}
+.bubble.ring{
+  background:transparent;border:3px solid #ffffff;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) translateX(0) scale(1);opacity:0;}
+  8%{opacity:.95;}
+  50%{transform:translateY(-55vh) translateX(34px) scale(1.08);}
+  100%{transform:translateY(-110vh) translateX(-10px) scale(1.18);opacity:0;}
+}
+@keyframes floatUpB{
+  0%{transform:translateY(0) translateX(0) scale(1);opacity:0;}
+  8%{opacity:.95;}
+  50%{transform:translateY(-55vh) translateX(-40px) scale(1.1);}
+  100%{transform:translateY(-110vh) translateX(16px) scale(1.2);opacity:0;}
+}
+/* もこもこ泡フォーム帯 */
+.foam{position:absolute;left:0;right:0;bottom:0;height:170px;z-index:2;pointer-events:none;}
+.foam-bump{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle at 34% 28%,#ffffff 0%,#f4fcff 55%,#e2f5fd 85%,#d4effc 100%);
+  box-shadow:0 -6px 18px rgba(0,185,239,.10),inset -8px -10px 18px rgba(178,234,250,.55);
+  animation:foamBob ease-in-out infinite alternate;
+}
+@keyframes foamBob{
+  from{transform:translateY(0) scale(1);}
+  to{transform:translateY(-14px) scale(1.07);}
+}
+/* 波 */
+.hero-wave{position:absolute;bottom:-2px;left:0;width:100%;z-index:2;line-height:0;}
+.hero-wave svg{width:100%;height:70px;display:block;}
+.scroll-hint{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+  font-family:"Montserrat",sans-serif;font-size:10px;letter-spacing:.3em;color:var(--blue);font-weight:800;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.scroll-hint::after{
+  content:"";width:2.5px;height:34px;background:var(--blue);
+  animation:scrollLine 1.6s ease-in-out infinite;transform-origin:top;
+}
+@keyframes scrollLine{0%{transform:scaleY(0)}55%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0;}}
+
+/* ===== お悩みマーキー ===== */
+.marquee-wrap{
+  background:var(--blue);padding:18px 0;overflow:hidden;white-space:nowrap;
+}
+.marquee{display:inline-block;animation:marquee 24s linear infinite;}
+.marquee span{
+  color:#fff;font-family:"Montserrat","Arial",sans-serif;
+  font-weight:800;font-size:clamp(15px,2.4vw,22px);letter-spacing:.12em;
+  margin-right:48px;
+}
+.marquee span em{font-style:normal;color:var(--yellow);}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== お悩みセクション ===== */
+.worry{background:var(--white);}
+.worry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:10px;}
+.worry-card{
+  background:#f3fbff;border:2px solid var(--bg-lb);border-radius:var(--radius);
+  padding:26px 22px;text-align:center;font-weight:700;
+  transition:transform .3s,box-shadow .3s;
+}
+.worry-card:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,185,239,.18);}
+.worry-card .icon{font-size:38px;display:block;margin-bottom:10px;}
+.worry-close{
+  text-align:center;margin-top:38px;font-size:clamp(17px,2.6vw,24px);font-weight:800;
+}
+.worry-close .marker{background:linear-gradient(transparent 62%,var(--yellow) 62%);}
+.arrow-down{
+  width:0;height:0;margin:26px auto 0;
+  border-left:26px solid transparent;border-right:26px solid transparent;
+  border-top:26px solid var(--lblue);
+  animation:bob 1.6s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ===== 特徴 ===== */
+.features{background:linear-gradient(180deg,#f3fbff,var(--bg-lb));}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+.feature-card{
+  background:var(--white);border-radius:var(--radius);
+  padding:32px 90px 32px 26px;
+  box-shadow:0 8px 26px rgba(49,101,175,.10);
+  transition:transform .3s,box-shadow .3s;
+  position:relative;overflow:hidden;
+}
+.feature-card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(49,101,175,.18);}
+.feature-card .num{
+  position:absolute;top:10px;right:16px;
+  font-family:"Montserrat","Arial",sans-serif;font-weight:800;font-size:44px;
+  color:var(--bg-lb);line-height:1;
+}
+.feature-card .f-icon{
+  width:58px;height:58px;border-radius:14px;
+  background:linear-gradient(135deg,var(--lblue),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;margin-bottom:16px;color:#fff;
+}
+.feature-card h3{font-size:18px;font-weight:800;margin-bottom:10px;color:var(--blue);}
+.feature-card p{font-size:14px;}
+
+/* ===== 数字で見る ===== */
+.stats{background:var(--blue);color:#fff;}
+.stats .sec-label{color:var(--yellow);}
+.stats .sec-title{color:#fff;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center;}
+.stat .value{
+  font-family:"Montserrat","Arial",sans-serif;
+  font-weight:800;font-size:clamp(40px,6vw,64px);line-height:1.1;color:var(--yellow);
+}
+.stat .value small{font-size:.45em;margin-left:4px;color:#fff;}
+.stat .label{font-size:14px;font-weight:700;margin-top:6px;}
+.stat .note{font-size:11px;opacity:.75;margin-top:4px;}
+.stats .chara-img{display:block;}
+
+/* ===== Before/After ===== */
+.ba{background:var(--white);}
+.ba-slider{
+  position:relative;max-width:760px;margin:0 auto;
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 14px 40px rgba(49,101,175,.22);
+  touch-action:none;user-select:tap;user-select:none;
+}
+.ba-slider svg{display:block;width:100%;height:auto;}
+.ba-after{position:absolute;inset:0;clip-path:inset(0 0 0 50%);}
+.ba-handle{
+  position:absolute;top:0;bottom:0;left:50%;width:4px;background:#fff;
+  box-shadow:0 0 12px rgba(0,0,0,.35);transform:translateX(-50%);
+}
+.ba-handle::after{
+  content:"◀ ▶";
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  background:#fff;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:2px;
+  width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.3);
+}
+.ba-tag{
+  position:absolute;top:14px;padding:6px 14px;border-radius:999px;
+  font-family:"Montserrat","Arial",sans-serif;font-weight:800;font-size:12px;letter-spacing:.1em;color:#fff;z-index:3;
+}
+.ba-tag.before{left:14px;background:rgba(51,51,51,.8);}
+.ba-tag.after{right:14px;background:var(--lblue);}
+.ba-note{text-align:center;font-size:12px;color:#888;margin-top:14px;}
+.ba-caption{text-align:center;font-weight:700;margin-top:18px;}
+
+/* ===== 料金 ===== */
+.price{background:linear-gradient(180deg,var(--bg-lb),#f3fbff);}
+.price-card{
+  max-width:680px;margin:0 auto;background:var(--white);
+  border-radius:var(--radius);padding:40px 30px;text-align:center;
+  box-shadow:0 10px 30px rgba(49,101,175,.14);
+  border-top:6px solid var(--lblue);
+}
+.price-card .catch{font-size:clamp(18px,3vw,26px);font-weight:800;color:var(--blue);margin-bottom:14px;}
+.price-card .catch .marker{background:linear-gradient(transparent 62%,var(--yellow) 62%);}
+.price-card p{font-size:14px;margin-bottom:10px;}
+.price-points{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 26px;}
+.price-points span{
+  background:#eefaff;color:var(--blue);border:1.5px solid var(--lblue);
+  font-size:13px;font-weight:800;padding:8px 16px;border-radius:999px;
+}
+
+/* ===== 流れ ===== */
+.flow{background:var(--white);}
+.flow-list{display:grid;gap:0;max-width:760px;margin:0 auto;}
+.flow-step{
+  display:flex;gap:20px;align-items:flex-start;position:relative;padding-bottom:38px;padding-right:56px;
+}
+.flow-step:not(:last-child)::before{
+  content:"";position:absolute;left:29px;top:60px;bottom:0;width:3px;
+  background:linear-gradient(var(--lblue),var(--bg-lb));border-radius:2px;
+}
+.flow-num{
+  flex:0 0 58px;width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg,var(--lblue),var(--blue));color:#fff;
+  font-family:"Montserrat","Arial",sans-serif;font-weight:800;font-size:20px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 16px rgba(0,185,239,.35);
+}
+.flow-body h3{font-size:17px;font-weight:800;color:var(--blue);margin-bottom:6px;}
+.flow-body p{font-size:14px;}
+
+/* ===== FAQ ===== */
+.faq{background:linear-gradient(180deg,#f3fbff,var(--bg-lb));}
+.faq-item{
+  background:var(--white);border-radius:14px;margin-bottom:14px;overflow:hidden;
+  box-shadow:0 6px 18px rgba(49,101,175,.10);
+}
+.faq-q{
+  width:100%;text-align:left;border:none;background:none;cursor:pointer;
+  padding:20px 54px 20px 22px;font-size:15px;font-weight:800;color:var(--dark);
+  position:relative;font-family:inherit;line-height:1.6;
+}
+.faq-q::before{content:"Q.";color:var(--lblue);font-family:"Montserrat",sans-serif;font-weight:800;margin-right:10px;}
+.faq-q::after{
+  content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);
+  font-size:24px;font-weight:400;color:var(--lblue);transition:transform .3s;
+}
+.faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-a-in{padding:0 22px 20px;font-size:14px;border-top:1px dashed var(--bg-lb);padding-top:16px;margin:0 0;}
+.faq-a-in::before{content:"A.";color:#e8555f;font-family:"Montserrat",sans-serif;font-weight:800;margin-right:10px;}
+
+/* ===== Instagram ===== */
+.insta{background:var(--white);text-align:center;}
+.insta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7);
+  color:#fff;font-weight:800;font-size:16px;
+  padding:16px 34px;border-radius:999px;
+  box-shadow:0 8px 22px rgba(238,42,123,.35);
+  transition:transform .25s;
+}
+.insta-btn:hover{transform:translateY(-3px) scale(1.02);}
+
+/* ===== 会社概要 ===== */
+.company{background:linear-gradient(180deg,#f3fbff,var(--bg-lb));}
+.company table{
+  width:100%;max-width:720px;margin:0 auto;border-collapse:collapse;background:var(--white);
+  border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 24px rgba(49,101,175,.12);
+}
+.company th,.company td{
+  padding:18px 20px;font-size:14px;text-align:left;border-bottom:1px solid #e8f4fb;vertical-align:top;
+}
+.company th{width:32%;background:#eefaff;color:var(--blue);font-weight:800;}
+@media(max-width:540px){
+  .company th,.company td{display:block;width:100%;}
+  .company th{padding-bottom:6px;}
+  .company td{padding-top:0;border-bottom:1px solid #e8f4fb;}
+  .company th{border-bottom:none;}
+}
+
+/* ===== コンタクト ===== */
+.contact{
+  background:linear-gradient(150deg,var(--blue),var(--lblue));
+  color:#fff;text-align:center;overflow:hidden;
+}
+.contact .sec-label{color:var(--yellow);}
+.contact .sec-title{color:#fff;}
+.contact p{max-width:640px;margin:0 auto 30px;font-size:14px;font-weight:600;}
+.contact-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.contact-btns .cta-btn{font-size:17px;padding:18px 40px;}
+.contact-btns .insta-btn{font-size:15px;}
+.tel-box{margin-top:28px;font-weight:800;}
+.tel-box .tel{
+  font-family:"Montserrat","Arial",sans-serif;font-size:clamp(26px,5vw,40px);letter-spacing:.04em;color:#fff;display:inline-block;
+}
+.tel-box small{display:block;font-size:12px;opacity:.85;font-weight:600;}
+
+/* ===== フッター ===== */
+footer{background:var(--dark);color:#fff;text-align:center;padding:34px 5%;font-size:12px;}
+footer .logo-f{font-family:"Montserrat",sans-serif;font-weight:800;font-size:18px;margin-bottom:8px;}
+footer .logo-f span{color:var(--lblue);}
+
+/* ===== キャラクター画像 ===== */
+.chara-img{display:block;object-fit:contain;filter:drop-shadow(0 8px 16px rgba(10,80,120,.18));}
+.chara-float{animation:charaFloat 3.4s ease-in-out infinite alternate;}
+@keyframes charaFloat{
+  from{transform:translateY(-8px) rotate(-2deg);}
+  to{transform:translateY(9px) rotate(2deg);}
+}
+.chara-flip{transform:scaleX(-1);}
+.chara-flip.chara-float{animation:charaFloatFlip 3.4s ease-in-out infinite alternate;}
+@keyframes charaFloatFlip{
+  from{transform:scaleX(-1) translateY(-8px) rotate(2deg);}
+  to{transform:scaleX(-1) translateY(9px) rotate(-2deg);}
+}
+.hero-chara-img{
+  position:absolute;right:5%;top:50%;transform:translateY(-50%);z-index:2;
+  width:clamp(180px,22vw,280px);
+}
+@media(max-width:840px){.hero-chara-img{width:130px;right:2%;top:auto;bottom:190px;}}
+.worry-chara-wrap{display:flex;justify-content:center;margin-top:14px;}
+.worry-chara-wrap img{width:100px;}
+.feature-card .chara-img{position:absolute;right:14px;bottom:10px;width:64px;opacity:.95;}
+.stat-chara{width:88px;margin:0 auto 6px;}
+.ba-chara{position:absolute;bottom:-18px;width:78px;z-index:4;}
+.ba-chara.before-c{left:6px;}
+.ba-chara.after-c{right:6px;}
+.price-chara{width:96px;margin:0 auto 12px;}
+.flow-step .chara-img{width:52px;flex:0 0 52px;position:absolute;right:-8px;top:-6px;}
+.faq-chara{width:70px;float:right;margin:-8px -4px 0 10px;}
+.contact-chara-img{width:110px;margin:0 auto 10px;}
+.footer-chara-img{width:64px;margin:0 auto 10px;}
+
+/* ===== 追従CTA（モバイル） ===== */
+.fixed-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  background:rgba(255,255,255,.95);box-shadow:0 -4px 16px rgba(0,0,0,.12);
+  padding:10px 12px;gap:10px;
+}
+.fixed-cta a{
+  flex:1;text-align:center;font-weight:800;font-size:13px;border-radius:10px;padding:13px 6px;
+}
+.fixed-cta .f-tel{background:var(--blue);color:#fff;}
+.fixed-cta .f-form{background:var(--yellow);color:var(--dark);}
+
+@media(max-width:840px){
+  nav.pc,header .cta-btn{display:none;}
+  .hamburger{display:block;}
+  .fixed-cta{display:flex;}
+  body{padding-bottom:64px;}
+  section{padding:64px 6%;}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a class="logo" href="#top" aria-label="外壁洗浄専門店 鹿児島LOOPZ">
+    <img class="logo-img" src="logo.png" alt="" onerror="this.style.display='none'">
+    <span class="en">LOO<span>PZ</span></span>
+    <span class="ja">外壁洗浄専門店<br>鹿児島LOOPZ</span>
+  </a>
+  <nav class="pc" aria-label="メインナビゲーション">
+    <a href="#worry">お悩み</a>
+    <a href="#features">選ばれる理由</a>
+    <a href="#ba">ビフォーアフター</a>
+    <a href="#price">料金</a>
+    <a href="#flow">ご依頼の流れ</a>
+    <a href="#faq">よくある質問</a>
+    <a href="#company">会社概要</a>
+  </nav>
+  <a class="cta-btn" href="#contact">無料お見積り</a>
+  <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+</header>
+
+<div class="sp-menu" id="spMenu">
+  <a href="#worry">お悩み</a>
+  <a href="#features">選ばれる理由</a>
+  <a href="#ba">ビフォーアフター</a>
+  <a href="#price">料金</a>
+  <a href="#flow">ご依頼の流れ</a>
+  <a href="#faq">よくある質問</a>
+  <a href="#company">会社概要</a>
+  <a class="cta-btn" href="#contact">無料お見積り</a>
+</div>
+
+<!-- ===== ヒーロー ===== -->
+<div class="hero" id="top">
+  <div class="bubbles" id="bubbles"></div>
+  <img class="chara-img chara-float hero-chara-img" src="chara5.png" alt="" onerror="this.style.display='none'">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="lead-en">GAIHEKI CLEANING SPECIALIST — KAGOSHIMA</p>
+      <h1 class="hero-title">
+        <span class="line"><span>その外壁の汚れ、</span></span>
+        <span class="line"><span><span class="blue">塗り替える前に</span><span class="wave">「洗う」</span>という選択。</span></span>
+      </h1>
+      <p class="hero-sub">カビ・コケ・藻・雨染み——気になる外壁の黒ずみを、専用洗浄液とていねいな手洗い施工でリセット。<br>外壁洗浄専門店 鹿児島LOOPZ（ループス）が、お住まいに新築のような輝きを取り戻します。</p>
+      <div class="hero-badges">
+        <span class="badge">塗り替えに比べ費用を大幅カット</span>
+        <span class="badge">外壁材にあわせた専用洗浄液</span>
+        <span class="badge">お見積り無料</span>
+      </div>
+      <div class="hero-cta">
+        <a class="cta-btn" href="#contact">無料でお見積り依頼</a>
+        <a class="ghost" href="#features">LOOPZが選ばれる理由</a>
+      </div>
+    </div>
+  </div>
+  <div class="foam" id="foam" aria-hidden="true"></div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,45 L1440,70 L0,70 Z" fill="#ffffff"></path></svg>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</div>
+
+<!-- ===== マーキー ===== -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee" id="marquee">
+    <span>GAIHEKI CLEANING <em>LOOPZ</em> KAGOSHIMA&nbsp;&nbsp;／&nbsp;&nbsp;カビ・コケ・藻・雨染みにさようなら&nbsp;&nbsp;／&nbsp;&nbsp;塗装ではない、新しい選択肢。&nbsp;&nbsp;／&nbsp;&nbsp;</span><span>GAIHEKI CLEANING <em>LOOPZ</em> KAGOSHIMA&nbsp;&nbsp;／&nbsp;&nbsp;カビ・コケ・藻・雨染みにさようなら&nbsp;&nbsp;／&nbsp;&nbsp;塗装ではない、新しい選択肢。&nbsp;&nbsp;／&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- ===== お悩み ===== -->
+<section class="worry" id="worry">
+  <div class="inner">
+    <span class="sec-label reveal">TROUBLE</span>
+    <h2 class="sec-title reveal">外壁のこんな汚れ、<br class="sp"><span class="marker">あきらめていませんか？</span></h2>
+    <div class="worry-grid">
+      <div class="worry-card reveal"><span class="icon">🦠</span>北側の壁が<br>緑や黒に変色してきた</div>
+      <div class="worry-card reveal d1"><span class="icon">🌧️</span>雨染み・黒スジが<br>目立ってきた</div>
+      <div class="worry-card reveal d2"><span class="icon">💸</span>塗り替えの見積りが<br>高すぎて踏み切れない</div>
+      <div class="worry-card reveal d3"><span class="icon">⚠️</span>高圧洗浄機で自分で洗って<br>外壁を傷めてしまった</div>
+    </div>
+    <p class="worry-close reveal">その汚れ、<span class="marker">塗り替えなくても落とせるかもしれません。</span></p>
+    <div class="worry-chara-wrap reveal"><img class="chara-img chara-float" src="chara12.png" alt="" onerror="this.style.display='none'"></div>
+    <div class="arrow-down" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ===== 特徴 ===== -->
+<section class="features" id="features">
+  <div class="inner">
+    <span class="sec-label reveal">REASON</span>
+    <h2 class="sec-title reveal">鹿児島LOOPZが<br><span class="marker">選ばれる理由</span></h2>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="num">01</span>
+        <div class="f-icon">💰</div>
+        <h3>塗り替えに比べて圧倒的に経済的</h3>
+        <p>外壁の塗り替えには一般的に100万円前後の費用がかかることも。「洗浄」なら大がかりな足場や塗料が不要な分、費用を大きく抑えられます。まずは洗って、塗装はその先の選択肢に。</p>
+        <img class="chara-img chara-float" src="chara3.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="feature-card reveal d1">
+        <span class="num">02</span>
+        <div class="f-icon">🧴</div>
+        <h3>外壁材にあわせた専用洗浄液</h3>
+        <p>サイディング・モルタル・ALCなど、外壁材ごとに適した専用の洗浄液を使い分け。カビ・藻・コケの根までしっかりアプローチし、汚れを元から分解します。</p>
+        <img class="chara-img chara-float" src="chara14.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="feature-card reveal d2">
+        <span class="num">03</span>
+        <div class="f-icon">🧤</div>
+        <h3>外壁を傷めない、ていねいな手洗い施工</h3>
+        <p>強い水圧で表面を削ってしまう高圧洗浄とは違い、LOOPZは手洗いを基本としたやさしい洗浄。塗膜やコーキングへの負担を抑えながら、すみずみまで美しく仕上げます。</p>
+        <img class="chara-img chara-float chara-flip" src="chara2.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="feature-card reveal">
+        <span class="num">04</span>
+        <div class="f-icon">⚡</div>
+        <h3>スピード施工で暮らしに負担をかけない</h3>
+        <p>塗装のように長期間の足場や養生は不要。一般的な戸建てなら短期間で施工が完了するので、日常生活への影響を最小限に抑えられます。</p>
+        <img class="chara-img chara-float" src="chara8.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="feature-card reveal d1">
+        <span class="num">05</span>
+        <div class="f-icon">🏠</div>
+        <h3>定期的な洗浄が外壁を長持ちさせる</h3>
+        <p>カビやコケを放置すると外壁材そのものの劣化を早めます。定期的な洗浄で汚れをためないことが、結果的に塗り替えサイクルを延ばし、住まいの寿命を守ります。</p>
+        <img class="chara-img chara-float" src="chara11.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="feature-card reveal d2">
+        <span class="num">06</span>
+        <div class="f-icon">📷</div>
+        <h3>写真を送るだけ、お見積りは無料</h3>
+        <p>気になる箇所のお写真とお家の情報をお送りいただくだけで、概算のお見積りが可能。現地調査ももちろん無料です。「まず金額だけ知りたい」も大歓迎です。</p>
+        <img class="chara-img chara-float" src="chara6.png" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 数字 ===== -->
+<section class="stats">
+  <div class="inner">
+    <span class="sec-label reveal">NUMBERS</span>
+    <h2 class="sec-title reveal">数字で見る、外壁洗浄という選択</h2>
+    <div class="stats-grid">
+      <div class="stat reveal"><img class="chara-img stat-chara chara-float" src="chara9.png" alt="" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="90">0</span><small>%</small></div><div class="label">塗り替え費用と比べた削減率の目安</div><div class="note">※建物の状態・施工内容により異なります</div></div>
+      <div class="stat reveal d1"><img class="chara-img stat-chara chara-float" src="chara5.png" alt="" style="animation-delay:.4s" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="1">0</span><small>日〜</small></div><div class="label">一般的な戸建ての施工期間</div><div class="note">※面数・汚れ具合により変動します</div></div>
+      <div class="stat reveal d2"><img class="chara-img stat-chara chara-float" src="chara7.png" alt="" style="animation-delay:.8s" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="0">0</span><small>円</small></div><div class="label">お見積り・ご相談</div><div class="note">※写真によるお見積りにも対応</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Before/After ===== -->
+<section class="ba" id="ba">
+  <div class="inner">
+    <span class="sec-label reveal">BEFORE / AFTER</span>
+    <h2 class="sec-title reveal">洗うだけで、<span class="marker">ここまで変わる。</span></h2>
+    <div class="ba-slider reveal" id="baSlider">
+      <span class="ba-tag before">BEFORE</span>
+      <span class="ba-tag after">AFTER</span>
+      <img class="chara-img ba-chara before-c" src="chara13.png" alt="" onerror="this.style.display='none'">
+      <img class="chara-img ba-chara after-c chara-flip" src="chara4.png" alt="" onerror="this.style.display='none'">
+      <!-- BEFORE -->
+      <svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="洗浄前の外壁イメージ">
+        <rect width="760" height="480" fill="#8a9aa5"/>
+        <rect width="760" height="480" fill="url(#dirtWall)"/>
+        <defs>
+          <pattern id="dirtWall" width="76" height="48" patternUnits="userSpaceOnUse">
+            <rect width="76" height="48" fill="#98a8b2"/>
+            <rect width="76" height="2" y="46" fill="#7d8d98"/>
+            <rect width="2" height="48" x="74" fill="#7d8d98"/>
+          </pattern>
+        </defs>
+        <g opacity=".85">
+          <ellipse cx="120" cy="380" rx="150" ry="120" fill="#3d5a3a" opacity=".55"/>
+          <ellipse cx="60" cy="200" rx="90" ry="160" fill="#41633c" opacity=".45"/>
+          <ellipse cx="300" cy="440" rx="180" ry="80" fill="#2f4a2e" opacity=".5"/>
+          <ellipse cx="520" cy="410" rx="140" ry="90" fill="#3d5a3a" opacity=".35"/>
+          <rect x="180" y="0" width="26" height="480" fill="#4a4a45" opacity=".35"/>
+          <rect x="420" y="0" width="18" height="480" fill="#4a4a45" opacity=".3"/>
+          <rect x="600" y="0" width="30" height="480" fill="#4a4a45" opacity=".25"/>
+          <ellipse cx="680" cy="120" rx="100" ry="70" fill="#3b3f35" opacity=".4"/>
+          <ellipse cx="380" cy="150" rx="120" ry="50" fill="#494f42" opacity=".3"/>
+        </g>
+        <text x="380" y="250" text-anchor="middle" font-size="26" font-weight="bold" fill="rgba(255,255,255,.85)" font-family="sans-serif">カビ・コケ・雨染みだらけの外壁</text>
+        <text x="380" y="284" text-anchor="middle" font-size="15" fill="rgba(255,255,255,.7)" font-family="sans-serif">（実際の施工写真に差し替え予定）</text>
+      </svg>
+      <!-- AFTER -->
+      <div class="ba-after" id="baAfter">
+        <svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="洗浄後の外壁イメージ">
+          <rect width="760" height="480" fill="url(#cleanWall)"/>
+          <defs>
+            <pattern id="cleanWall" width="76" height="48" patternUnits="userSpaceOnUse">
+              <rect width="76" height="48" fill="#f2f5f7"/>
+              <rect width="76" height="2" y="46" fill="#dde4e9"/>
+              <rect width="2" height="48" x="74" fill="#dde4e9"/>
+            </pattern>
+          </defs>
+          <rect width="760" height="480" fill="url(#shine)" opacity=".5"/>
+          <defs>
+            <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffffff"/>
+              <stop offset=".5" stop-color="#e9f7fd"/>
+              <stop offset="1" stop-color="#ffffff"/>
+            </linearGradient>
+          </defs>
+          <g font-family="sans-serif">
+            <text x="380" y="250" text-anchor="middle" font-size="26" font-weight="bold" fill="#3165af">新築のような輝きが復活</text>
+            <text x="380" y="284" text-anchor="middle" font-size="15" fill="#7aa0c8">（実際の施工写真に差し替え予定）</text>
+          </g>
+          <g fill="#bfe9fa" opacity=".8">
+            <circle cx="90" cy="90" r="5"/><circle cx="130" cy="60" r="3"/><circle cx="660" cy="380" r="6"/><circle cx="700" cy="340" r="3"/><circle cx="620" cy="100" r="4"/>
+          </g>
+          <g stroke="#ffe95c" stroke-width="4" stroke-linecap="round">
+            <path d="M70,40 l0,26 M57,53 l26,0"/>
+            <path d="M690,60 l0,22 M679,71 l22,0"/>
+            <path d="M120,420 l0,22 M109,431 l22,0"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ba-handle" id="baHandle"></div>
+    </div>
+    <p class="ba-caption reveal">スライダーを左右に動かして、洗浄前後の違いをご覧ください。</p>
+    <p class="ba-note">※上記はイメージです。施工事例の写真はInstagramで多数公開しています。</p>
+  </div>
+</section>
+
+<!-- ===== 料金 ===== -->
+<section class="price" id="price">
+  <div class="inner">
+    <span class="sec-label reveal">PRICE</span>
+    <h2 class="sec-title reveal">わかりやすく、<span class="marker">安心の明朗会計</span></h2>
+    <div class="price-card reveal">
+      <img class="chara-img price-chara chara-float" src="chara10.png" alt="" onerror="this.style.display='none'">
+      <p class="catch">気になる面だけ、<span class="marker">1面からご依頼OK</span></p>
+      <p>お家の大きさ・外壁の素材・汚れの状態にあわせて、最適なプランをご提案します。追加料金が発生する場合は必ず事前にご説明。見積り後の押し売りは一切いたしません。</p>
+      <div class="price-points">
+        <span>お見積り無料</span>
+        <span>写真だけで概算OK</span>
+        <span>1面からOK</span>
+        <span>事前説明のない追加請求なし</span>
+      </div>
+      <a class="cta-btn" href="#contact">まずは無料でお見積り</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 流れ ===== -->
+<section class="flow" id="flow">
+  <div class="inner">
+    <span class="sec-label reveal">FLOW</span>
+    <h2 class="sec-title reveal">ご依頼の流れ</h2>
+    <div class="flow-list">
+      <div class="flow-step reveal">
+        <div class="flow-num">1</div>
+        <div class="flow-body">
+          <h3>お問い合わせ</h3>
+          <p>お電話またはInstagramのDMからお気軽にご連絡ください。「築年数」「汚れている面のお写真」「お住まいの地域」をお送りいただくと、概算のお見積りがスムーズです。</p>
+        </div>
+        <img class="chara-img chara-float" src="chara6.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="flow-step reveal d1">
+        <div class="flow-num">2</div>
+        <div class="flow-body">
+          <h3>現地調査・お見積り（無料）</h3>
+          <p>外壁の素材や汚れの種類をプロの目で確認し、最適な洗浄方法とお見積りをご提示します。内容にご納得いただいてからのご契約なのでご安心ください。</p>
+        </div>
+        <img class="chara-img chara-float" src="chara7.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="flow-step reveal d2">
+        <div class="flow-num">3</div>
+        <div class="flow-body">
+          <h3>洗浄施工</h3>
+          <p>外壁材にあわせた専用洗浄液とていねいな手洗いで、汚れを根こそぎ洗浄。お住まいと植栽まわりへの配慮も欠かしません。</p>
+        </div>
+        <img class="chara-img chara-float" src="chara15.png" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="flow-step reveal d3">
+        <div class="flow-num">4</div>
+        <div class="flow-body">
+          <h3>仕上がり確認・お引き渡し</h3>
+          <p>お客様と一緒にビフォーアフターを確認して完了です。施工後のメンテナンスや、外壁をきれいに保つコツもアドバイスいたします。</p>
+        </div>
+        <img class="chara-img chara-float" src="chara9.png" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="inner">
+    <span class="sec-label reveal">FAQ</span>
+    <h2 class="sec-title reveal">よくある質問</h2>
+    <div class="faq-item reveal">
+      <button class="faq-q">高圧洗浄機で自分で洗うのと何が違うのですか？</button>
+      <div class="faq-a"><p class="faq-a-in">家庭用高圧洗浄機は水圧で表面の汚れを飛ばすため、塗膜やコーキングを傷めたり、カビ・コケの根が残ってすぐ再発したりすることがあります。LOOPZでは外壁材にあわせた専用洗浄液で汚れを分解し、手洗いでやさしく洗い流すため、外壁を傷めずに根本からきれいにできます。</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">どんな汚れでも落ちますか？</button>
+      <div class="faq-a"><p class="faq-a-in">カビ・藻・コケ・雨染み・排気汚れなど、外壁の汚れの多くに対応できます。ただし、塗膜の劣化による色あせやチョーキングなど「汚れではない変化」は洗浄では戻りません。現地調査の際に、洗浄で対応できる範囲を正直にご説明します。</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">施工にはどのくらい時間がかかりますか？</button>
+      <div class="faq-a"><p class="faq-a-in">一般的な戸建ての1〜2面であれば1日程度、全面でも数日以内に完了するケースがほとんどです。塗装工事のように長期間足場が組まれることはありません。</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">見積りだけでもお願いできますか？</button>
+      <div class="faq-a"><p class="faq-a-in">もちろんです。お見積り・ご相談は無料で、写真をお送りいただくだけの概算見積りにも対応しています。金額を見てからじっくりご検討ください。</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q">対応エリアはどこまでですか？</button>
+      <div class="faq-a"><p class="faq-a-in">鹿児島県内を中心に対応しています。近隣エリアの方もまずはお気軽にご相談ください。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Instagram ===== -->
+<section class="insta">
+  <div class="inner">
+    <span class="sec-label reveal">INSTAGRAM</span>
+    <img class="chara-img chara-float" src="chara8.png" alt="" style="width:100px;margin:0 auto 6px;" onerror="this.style.display='none'">
+    <h2 class="sec-title reveal">施工事例を<span class="marker">毎日更新中</span></h2>
+    <p class="reveal" style="margin-bottom:28px;">「洗浄で、鹿児島を綺麗にする。」<br>ビフォーアフター写真や洗浄の様子は、Instagramでご覧いただけます。DMからのお見積り依頼も受付中です。</p>
+    <a class="insta-btn reveal" href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+      @gaiheki.loopz.kagoshima をフォロー
+    </a>
+  </div>
+</section>
+
+<!-- ===== 会社概要 ===== -->
+<section class="company" id="company">
+  <div class="inner">
+    <span class="sec-label reveal">COMPANY</span>
+    <h2 class="sec-title reveal">会社概要</h2>
+    <table class="reveal">
+      <tr><th>店舗名</th><td>鹿児島LOOPZ（外壁洗浄専門店ループス）</td></tr>
+      <tr><th>運営会社</th><td>株式会社NEXEED</td></tr>
+      <tr><th>所在地</th><td>鹿児島県鹿屋市旭原町3612番地37</td></tr>
+      <tr><th>法人番号</th><td>4340001028135</td></tr>
+      <tr><th>事業内容</th><td>外壁洗浄・エクステリアクリーニング事業</td></tr>
+      <tr><th>対応エリア</th><td>鹿児島県および近隣エリア</td></tr>
+      <tr><th>Instagram</th><td><a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">@gaiheki.loopz.kagoshima</a></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== コンタクト ===== -->
+<section class="contact" id="contact">
+  <div class="inner">
+    <span class="sec-label reveal">CONTACT</span>
+    <img class="chara-img contact-chara-img chara-float reveal" src="chara11.png" alt="" onerror="this.style.display='none'">
+    <h2 class="sec-title reveal">まずは、お家の写真を<br>送ってみませんか？</h2>
+    <p class="reveal">「①築年数 ②汚れている面のお写真 ③お住まいの地域」をお送りいただくだけで、概算お見積りをお出しします。<br>しつこい営業は一切ありません。お気軽にどうぞ。</p>
+    <div class="contact-btns reveal">
+      <a class="insta-btn" href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener">InstagramのDMで相談する</a>
+    </div>
+    <div class="tel-box reveal d1">
+      <span class="tel">000-0000-0000</span>
+      <small>受付時間 10:00〜18:00（電話番号は仮です・確定後に差し替え）</small>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img class="chara-img footer-chara-img" src="chara1.png" alt="" onerror="this.style.display='none'">
+  <div class="logo-f">LOO<span>PZ</span> KAGOSHIMA</div>
+  <p>外壁洗浄専門店 鹿児島LOOPZ（運営：株式会社NEXEED）</p>
+  <p style="margin-top:8px;opacity:.6;">&copy; 2026 NEXEED Inc. All Rights Reserved.</p>
+</footer>
+
+<div class="fixed-cta">
+  <a class="f-tel" href="tel:0000000000">📞 電話で相談</a>
+  <a class="f-form" href="#contact">✉️ 無料お見積り</a>
+</div>
+
+<script>
+// ===== スクロールリビール =====
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on'));
+}
+
+// ===== ヘッダー（下スクロールで隠す） =====
+let lastY=0;
+const header=document.getElementById('header');
+addEventListener('scroll',()=>{
+  const y=scrollY;
+  header.classList.toggle('hide',y>120&&y>lastY&&!document.body.classList.contains('menu-open'));
+  lastY=y;
+},{passive:true});
+
+// ===== ハンバーガー =====
+const hb=document.getElementById('hamburger');
+hb.addEventListener('click',()=>document.body.classList.toggle('menu-open'));
+document.querySelectorAll('.sp-menu a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+
+// ===== 泡 =====
+const bw=document.getElementById('bubbles');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce){
+  for(let i=0;i<44;i++){
+    const b=document.createElement('div');
+    b.className='bubble';
+    const s=6+Math.random()*58;
+    b.style.width=b.style.height=s+'px';
+    b.style.left=Math.random()*100+'%';
+    const r=Math.random();
+    if(r<.3)b.classList.add('tint');else if(r<.45)b.classList.add('ring');
+    b.style.animationName=Math.random()<.5?'floatUp':'floatUpB';
+    b.style.animationDuration=(6+Math.random()*11)+'s';
+    b.style.animationDelay=(Math.random()*11)+'s';
+    bw.appendChild(b);
+  }
+}
+// ===== もこもこフォーム帯 =====
+const foam=document.getElementById('foam');
+if(foam){
+  const bumps=[];
+  // 奥の列（大きめ・薄め）と手前の列（小さめ・濃いめ）の2層
+  for(let i=0;i<12;i++)bumps.push({s:90+Math.random()*100,l:i/12*100+(Math.random()*6-3),b:-40-Math.random()*20,o:.75});
+  for(let i=0;i<16;i++)bumps.push({s:44+Math.random()*70,l:i/16*100+(Math.random()*5-2.5),b:-14-Math.random()*14,o:1});
+  bumps.forEach(v=>{
+    const d=document.createElement('div');
+    d.className='foam-bump';
+    d.style.width=d.style.height=v.s+'px';
+    d.style.left='calc('+v.l+'% - '+v.s/2+'px)';
+    d.style.bottom=v.b+'px';
+    d.style.opacity=v.o;
+    d.style.animationDuration=(2.6+Math.random()*2.6)+'s';
+    d.style.animationDelay=(-Math.random()*4)+'s';
+    if(reduce)d.style.animation='none';
+    foam.appendChild(d);
+  });
+}
+
+// ===== カウントアップ =====
+const cio=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,to=+el.dataset.to;
+    const t0=performance.now(),dur=1400;
+    (function tick(t){
+      const p=Math.min((t-t0)/dur,1);
+      el.textContent=Math.round(to*(1-Math.pow(1-p,3)));
+      if(p<1)requestAnimationFrame(tick);
+    })(t0);
+    cio.unobserve(el);
+  });
+},{threshold:.6});
+document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+
+// ===== Before/After スライダー =====
+const slider=document.getElementById('baSlider');
+const after=document.getElementById('baAfter');
+const handle=document.getElementById('baHandle');
+function setBA(x){
+  const r=slider.getBoundingClientRect();
+  let p=(x-r.left)/r.width;
+  p=Math.max(.03,Math.min(.97,p));
+  after.style.clipPath=`inset(0 0 0 ${p*100}%)`;
+  handle.style.left=p*100+'%';
+}
+let dragging=false;
+slider.addEventListener('pointerdown',e=>{dragging=true;slider.setPointerCapture(e.pointerId);setBA(e.clientX);});
+slider.addEventListener('pointermove',e=>{if(dragging)setBA(e.clientX);});
+addEventListener('pointerup',()=>dragging=false);
+
+// ===== FAQ =====
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement,a=item.querySelector('.faq-a');
+    const open=item.classList.toggle('open');
+    a.style.maxHeight=open?a.scrollHeight+'px':0;
+  });
+});
+</script>
+</body>
+</html>
