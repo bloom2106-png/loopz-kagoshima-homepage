@@ -376,6 +376,12 @@ body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
 .price-card .catch{font-size:clamp(18px,3vw,26px);font-weight:800;color:var(--blue);margin-bottom:14px;}
 .price-card .catch .marker{background:linear-gradient(transparent 62%,var(--yellow) 62%);}
 .price-card p{font-size:14px;margin-bottom:10px;}
+.price-table{margin:22px 0;border:2px solid var(--bg-lb);border-radius:14px;overflow:hidden;text-align:left;}
+.price-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px;font-weight:700;font-size:14px;}
+.price-row:not(:last-child){border-bottom:1px solid var(--bg-lb);}
+.price-item{color:var(--dark);}
+.price-amount{color:var(--blue);font-weight:800;white-space:nowrap;}
+.price-amount small{font-weight:600;color:#7a8a99;}
 .price-points{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 26px;}
 .price-points span{
   background:#eefaff;color:var(--blue);border:1.5px solid var(--lblue);
@@ -467,7 +473,8 @@ body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
 .tel-box .tel{
   font-family:"Montserrat","Arial",sans-serif;font-size:clamp(26px,5vw,40px);letter-spacing:.04em;color:#fff;display:inline-block;
 }
-.tel-box small{display:block;font-size:12px;opacity:.85;font-weight:600;}
+.tel-box small{display:block;font-size:12px;opacity:.85;font-weight:600;margin-top:4px;}
+.tel-box small a,.tel-box .tel{color:#fff;text-decoration:underline;text-underline-offset:3px;}
 
 /* ===== フッター ===== */
 footer{background:var(--dark);color:#fff;text-align:center;padding:34px 5%;font-size:12px;}
@@ -516,6 +523,22 @@ footer .logo-f span{color:var(--lblue);}
 }
 .fixed-cta .f-tel{background:var(--blue);color:#fff;}
 .fixed-cta .f-form{background:var(--yellow);color:var(--dark);}
+
+/* ===== 右下固定バナー（デスクトップ） ===== */
+.fixed-side{
+  position:fixed;right:22px;bottom:22px;z-index:95;
+  display:flex;flex-direction:column;gap:12px;
+}
+.fixed-side a{
+  width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.22);
+  color:#fff;font-size:26px;transition:transform .2s;
+}
+.fixed-side a:hover{transform:scale(1.08);}
+.fixed-side .fs-insta{background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7);}
+.fixed-side .fs-line{background:#06c755;}
+@media(max-width:840px){.fixed-side{right:14px;bottom:82px;}.fixed-side a{width:50px;height:50px;font-size:22px;}}
 
 @media(max-width:840px){
   nav.pc,header .cta-btn{display:none;}
@@ -572,7 +595,7 @@ footer .logo-f span{color:var(--lblue);}
       <p class="hero-sub">カビ・コケ・藻・雨染み——気になる外壁の黒ずみを、専用洗浄液とていねいな手洗い施工でリセット。<br>外壁洗浄専門店 鹿児島LOOPZ（ループス）が、お住まいに新築のような輝きを取り戻します。</p>
       <div class="hero-badges">
         <span class="badge">塗り替えに比べ費用を大幅カット</span>
-        <span class="badge">外壁材にあわせた専用洗浄液</span>
+        <span class="badge">ループスオリジナル洗浄液</span>
         <span class="badge">お見積り無料</span>
       </div>
       <div class="hero-cta">
@@ -628,8 +651,8 @@ footer .logo-f span{color:var(--lblue);}
       <div class="feature-card reveal d1">
         <span class="num">02</span>
         <div class="f-photo-placeholder">写真準備中</div>
-        <h3>外壁材にあわせた専用洗浄液</h3>
-        <p>サイディング・モルタル・ALCなど、外壁材ごとに適した専用の洗浄液を使い分け。カビ・藻・コケの根までしっかりアプローチし、汚れを元から分解します。</p>
+        <h3>ループスオリジナル洗浄液を使用</h3>
+        <p>サイディング・モルタル・ALCなど、外壁材ごとに適したループスオリジナルの洗浄液を使い分け。カビ・藻・コケの根までしっかりアプローチし、汚れを元から分解します。</p>
         <img class="chara-img chara-float" src="chara14.png" alt="" onerror="this.style.display='none'">
       </div>
       <div class="feature-card reveal d2">
@@ -670,8 +693,8 @@ footer .logo-f span{color:var(--lblue);}
     <span class="sec-label reveal">NUMBERS</span>
     <h2 class="sec-title reveal">数字で見る、外壁洗浄という選択</h2>
     <div class="stats-grid">
-      <div class="stat reveal"><img class="chara-img stat-chara chara-float" src="chara9.png" alt="" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="90">0</span><small>%</small></div><div class="label">塗り替え費用と比べた削減率の目安</div><div class="note">※建物の状態・施工内容により異なります</div></div>
-      <div class="stat reveal d1"><img class="chara-img stat-chara chara-float" src="chara5.png" alt="" style="animation-delay:.4s" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="1">0</span><small>日〜</small></div><div class="label">一般的な戸建ての施工期間</div><div class="note">※面数・汚れ具合により変動します</div></div>
+      <div class="stat reveal"><img class="chara-img stat-chara chara-float" src="chara9.png" alt="" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="1">0</span><small>/10</small></div><div class="label">塗り替え費用と比べた目安</div><div class="note">※建物の状態・施工内容により異なります</div></div>
+      <div class="stat reveal d1"><img class="chara-img stat-chara chara-float" src="chara5.png" alt="" style="animation-delay:.4s" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="2">0</span><small>時間〜</small></div><div class="label">最短の施工時間</div><div class="note">※面数・汚れ具合により変動します</div></div>
       <div class="stat reveal d2"><img class="chara-img stat-chara chara-float" src="chara7.png" alt="" style="animation-delay:.8s" onerror="this.style.display='none'"><div class="value"><span class="count" data-to="0">0</span><small>円</small></div><div class="label">お見積り・ご相談</div><div class="note">※写真によるお見積りにも対応</div></div>
     </div>
   </div>
@@ -723,6 +746,10 @@ footer .logo-f span{color:var(--lblue);}
       <img class="chara-img price-chara chara-float" src="chara10.png" alt="" onerror="this.style.display='none'">
       <p class="catch">気になる面だけ、<span class="marker">1面からご依頼OK</span></p>
       <p>お家の大きさ・外壁の素材・汚れの状態にあわせて、最適なプランをご提案します。追加料金が発生する場合は必ず事前にご説明。見積り後の押し売りは一切いたしません。</p>
+      <div class="price-table">
+        <div class="price-row"><span class="price-item">外壁洗浄</span><span class="price-amount">1㎡ あたり 280円<small>（税別）</small></span></div>
+        <div class="price-row"><span class="price-item">玄関タイル・カーポート洗浄</span><span class="price-amount">お見積りいたします</span></div>
+      </div>
       <div class="price-points">
         <span>お見積り無料</span>
         <span>写真だけで概算OK</span>
@@ -830,6 +857,8 @@ footer .logo-f span{color:var(--lblue);}
       <tr><th>法人番号</th><td>4340001028135</td></tr>
       <tr><th>事業内容</th><td>外壁洗浄・エクステリアクリーニング事業</td></tr>
       <tr><th>対応エリア</th><td>鹿児島県および近隣エリア</td></tr>
+      <tr><th>電話番号</th><td>0994-36-0909（携帯：080-1626-0888）</td></tr>
+      <tr><th>メール</th><td><a href="mailto:info@nexeed-mirise.com" style="color:var(--blue);font-weight:700;">info@nexeed-mirise.com</a></td></tr>
       <tr><th>Instagram</th><td><a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700;">@gaiheki.loopz.kagoshima</a></td></tr>
     </table>
   </div>
@@ -846,8 +875,9 @@ footer .logo-f span{color:var(--lblue);}
       <a class="insta-btn" href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener">InstagramのDMで相談する</a>
     </div>
     <div class="tel-box reveal d1">
-      <span class="tel">000-0000-0000</span>
-      <small>受付時間 10:00〜18:00（電話番号は仮です・確定後に差し替え）</small>
+      <a class="tel" href="tel:0994360909">0994-36-0909</a>
+      <small>携帯：<a href="tel:08016260888">080-1626-0888</a>／受付時間 10:00〜18:00</small>
+      <small>メール：<a href="mailto:info@nexeed-mirise.com">info@nexeed-mirise.com</a></small>
     </div>
   </div>
 </section>
@@ -859,8 +889,14 @@ footer .logo-f span{color:var(--lblue);}
   <p style="margin-top:8px;opacity:.6;">&copy; 2026 NEXEED Inc. All Rights Reserved.</p>
 </footer>
 
+<div class="fixed-side">
+  <a class="fs-insta" href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+  </a>
+</div>
+
 <div class="fixed-cta">
-  <a class="f-tel" href="tel:0000000000">📞 電話で相談</a>
+  <a class="f-tel" href="tel:0994360909">📞 電話で相談</a>
   <a class="f-form" href="#contact">✉️ 無料お見積り</a>
 </div>
 
