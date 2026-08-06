@@ -306,6 +306,14 @@ body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
   display:flex;align-items:center;justify-content:center;
   font-size:28px;margin-bottom:16px;color:#fff;
 }
+.f-photo-placeholder{
+  width:100%;height:160px;border-radius:14px;
+  background:#e9eef3;border:2px dashed #b9c4cf;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;color:#8a97a3;margin-bottom:16px;font-weight:700;
+}
+.f-photo{width:100%;height:160px;border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.f-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .feature-card h3{font-size:18px;font-weight:800;margin-bottom:10px;color:var(--blue);}
 .feature-card p{font-size:14px;}
 
@@ -332,6 +340,8 @@ body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
   touch-action:none;user-select:tap;user-select:none;
 }
 .ba-photo,.ba-slider svg{display:block;width:100%;height:100%;object-fit:cover;}
+.ba-block-label{text-align:center;font-weight:800;color:var(--blue);font-size:18px;margin:36px 0 14px;letter-spacing:.05em;}
+.ba-block-label:first-of-type{margin-top:8px;}
 .ba-after{position:absolute;inset:0;clip-path:inset(0 0 0 50%);}
 .ba-after .ba-photo{display:block;width:100%;height:100%;object-fit:cover;}
 .ba-handle{
@@ -610,42 +620,42 @@ footer .logo-f span{color:var(--lblue);}
     <div class="feature-grid">
       <div class="feature-card reveal">
         <span class="num">01</span>
-        <div class="f-icon">💰</div>
+        <div class="f-photo-placeholder">写真準備中</div>
         <h3>塗り替えに比べて圧倒的に経済的</h3>
         <p>外壁の塗り替えには一般的に100万円前後の費用がかかることも。「洗浄」なら大がかりな足場や塗料が不要な分、費用を大きく抑えられます。まずは洗って、塗装はその先の選択肢に。</p>
         <img class="chara-img chara-float" src="chara3.png" alt="" onerror="this.style.display='none'">
       </div>
       <div class="feature-card reveal d1">
         <span class="num">02</span>
-        <div class="f-icon">🧴</div>
+        <div class="f-photo-placeholder">写真準備中</div>
         <h3>外壁材にあわせた専用洗浄液</h3>
         <p>サイディング・モルタル・ALCなど、外壁材ごとに適した専用の洗浄液を使い分け。カビ・藻・コケの根までしっかりアプローチし、汚れを元から分解します。</p>
         <img class="chara-img chara-float" src="chara14.png" alt="" onerror="this.style.display='none'">
       </div>
       <div class="feature-card reveal d2">
         <span class="num">03</span>
-        <div class="f-icon">🧤</div>
+        <div class="f-photo"><img src="work-cleaning.jpg" alt="手洗いでていねいに洗浄している様子"></div>
         <h3>外壁を傷めない、ていねいな手洗い施工</h3>
         <p>強い水圧で表面を削ってしまう高圧洗浄とは違い、LOOPZは手洗いを基本としたやさしい洗浄。塗膜やコーキングへの負担を抑えながら、すみずみまで美しく仕上げます。</p>
         <img class="chara-img chara-float chara-flip" src="chara2.png" alt="" onerror="this.style.display='none'">
       </div>
       <div class="feature-card reveal">
         <span class="num">04</span>
-        <div class="f-icon">⚡</div>
+        <div class="f-photo-placeholder">写真準備中</div>
         <h3>スピード施工で暮らしに負担をかけない</h3>
         <p>塗装のように長期間の足場や養生は不要。一般的な戸建てなら短期間で施工が完了するので、日常生活への影響を最小限に抑えられます。</p>
         <img class="chara-img chara-float" src="chara8.png" alt="" onerror="this.style.display='none'">
       </div>
       <div class="feature-card reveal d1">
         <span class="num">05</span>
-        <div class="f-icon">🏠</div>
+        <div class="f-photo"><img src="vent-closeup.jpg" alt="外壁に付着した汚れのクローズアップ"></div>
         <h3>定期的な洗浄が外壁を長持ちさせる</h3>
         <p>カビやコケを放置すると外壁材そのものの劣化を早めます。定期的な洗浄で汚れをためないことが、結果的に塗り替えサイクルを延ばし、住まいの寿命を守ります。</p>
         <img class="chara-img chara-float" src="chara11.png" alt="" onerror="this.style.display='none'">
       </div>
       <div class="feature-card reveal d2">
         <span class="num">06</span>
-        <div class="f-icon">📷</div>
+        <div class="f-photo-placeholder">写真準備中</div>
         <h3>写真を送るだけ、お見積りは無料</h3>
         <p>気になる箇所のお写真とお家の情報をお送りいただくだけで、概算のお見積りが可能。現地調査ももちろん無料です。「まず金額だけ知りたい」も大歓迎です。</p>
         <img class="chara-img chara-float" src="chara6.png" alt="" onerror="this.style.display='none'">
@@ -672,21 +682,35 @@ footer .logo-f span{color:var(--lblue);}
   <div class="inner">
     <span class="sec-label reveal">BEFORE / AFTER</span>
     <h2 class="sec-title reveal">洗うだけで、<span class="marker">ここまで変わる。</span></h2>
+
+    <p class="ba-block-label reveal">外壁</p>
     <div class="ba-slider reveal" id="baSlider">
       <span class="ba-tag before">BEFORE</span>
       <span class="ba-tag after">AFTER</span>
       <img class="chara-img ba-chara before-c" src="chara13.png" alt="" onerror="this.style.display='none'">
       <img class="chara-img ba-chara after-c chara-flip" src="chara4.png" alt="" onerror="this.style.display='none'">
-      <!-- BEFORE -->
-      <img class="ba-photo" src="top-before.jpg" alt="洗浄前の外壁" loading="lazy">
-      <!-- AFTER -->
+      <img class="ba-photo" src="wall-before.jpg" alt="洗浄前の外壁" loading="lazy">
       <div class="ba-after" id="baAfter">
-        <img class="ba-photo" src="top-after.jpg" alt="洗浄後の外壁" loading="lazy">
+        <img class="ba-photo" src="wall-after.jpg" alt="洗浄後の外壁" loading="lazy">
+
       </div>
       <div class="ba-handle" id="baHandle"></div>
     </div>
     <p class="ba-caption reveal">スライダーを左右に動かして、洗浄前後の違いをご覧ください。</p>
-    <p class="ba-note">※上記はイメージです。施工事例の写真はInstagramで多数公開しています。</p>
+
+    <p class="ba-block-label reveal">玄関</p>
+    <div class="ba-slider reveal" id="baSlider2">
+      <span class="ba-tag before">BEFORE</span>
+      <span class="ba-tag after">AFTER</span>
+      <img class="ba-photo" src="entrance-before.jpg" alt="洗浄前の玄関タイル">
+      <div class="ba-after" id="baAfter2">
+        <img class="ba-photo" src="entrance-after.jpg" alt="洗浄後の玄関タイル">
+      </div>
+      <div class="ba-handle" id="baHandle2"></div>
+    </div>
+    <p class="ba-caption reveal">こちらも左右に動かしてご覧いただけます。</p>
+
+    <p class="ba-note">※他の施工事例はInstagramでも多数公開しています。</p>
   </div>
 </section>
 
@@ -935,6 +959,23 @@ let dragging=false;
 slider.addEventListener('pointerdown',e=>{dragging=true;slider.setPointerCapture(e.pointerId);setBA(e.clientX);});
 slider.addEventListener('pointermove',e=>{if(dragging)setBA(e.clientX);});
 addEventListener('pointerup',()=>dragging=false);
+const slider2=document.getElementById('baSlider2');
+const after2=document.getElementById('baAfter2');
+const handle2=document.getElementById('baHandle2');
+function setBA2(x){
+  const r=slider2.getBoundingClientRect();
+  let p=(x-r.left)/r.width;
+  p=Math.max(.03,Math.min(.97,p));
+  after2.style.clipPath=`inset(0 0 0 ${p*100}%)`;
+  handle2.style.left=p*100+'%';
+}
+let dragging2=false;
+slider2.addEventListener('pointerdown',e=>{dragging2=true;slider2.setPointerCapture(e.pointerId);setBA2(e.clientX);});
+slider2.addEventListener('pointermove',e=>{
+  if(dragging2) setBA2(e.clientX);
+});
+addEventListener('pointerup',()=>dragging2=false);
+
 
 // ===== FAQ =====
 document.querySelectorAll('.faq-q').forEach(q=>{
