@@ -459,11 +459,12 @@ body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
 .insta-follow:hover{transform:translateY(-2px);}
 .insta-track-wrap{overflow:hidden;width:100%;}
 .insta-track{display:flex;gap:14px;width:max-content;animation:instaScroll 32s linear infinite;}
+.insta-track a{flex:0 0 auto;display:block;border-radius:10px;overflow:hidden;cursor:pointer;}
 .insta-track img{
-  width:220px;height:220px;object-fit:cover;border-radius:10px;flex:0 0 auto;
+  width:220px;height:220px;object-fit:cover;display:block;
   filter:brightness(.92);transition:filter .2s,transform .2s;
 }
-.insta-track img:hover{filter:brightness(1.05);transform:scale(1.03);}
+.insta-track a:hover img{filter:brightness(1.05);transform:scale(1.03);}
 @keyframes instaScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 @media(max-width:640px){.insta-track img{width:150px;height:150px;}}
 @media (prefers-reduced-motion:reduce){.insta-track{animation:none;}}
@@ -883,31 +884,31 @@ footer .logo-f span{color:var(--lblue);}
   </div>
   <div class="insta-track-wrap">
     <div class="insta-track">
-      <img src="moss.jpg" alt="コケで黒ずんだ外壁" loading="lazy">
-      <img src="wall-after.jpg" alt="洗浄後の外壁" loading="lazy">
-      <img src="raindrip.jpg" alt="雨だれで黒く筋になった外壁" loading="lazy">
-      <img src="entrance-before.jpg" alt="洗浄前の玄関タイル" loading="lazy">
-      <img src="mold.jpg" alt="カビ汚れの外壁" loading="lazy">
-      <img src="entrance-after.jpg" alt="洗浄後の玄関タイル" loading="lazy">
-      <img src="work-cleaning.jpg" alt="手洗いで洗浄している様子" loading="lazy">
-      <img src="house-before.jpg" alt="洗浄前の戸建て" loading="lazy">
-      <img src="vent-closeup.jpg" alt="汚れのクローズアップ" loading="lazy">
-      <img src="apartment-after.jpg" alt="洗浄後のアパート" loading="lazy">
-      <img src="trial-clean.jpg" alt="お試し洗浄の様子" loading="lazy">
-      <img src="top-after.jpg" alt="洗浄後の外壁" loading="lazy">
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="moss.jpg" alt="コケで黒ずんだ外壁" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="wall-after.jpg" alt="洗浄後の外壁" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="raindrip.jpg" alt="雨だれで黒く筋になった外壁" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="entrance-before.jpg" alt="洗浄前の玄関タイル" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="mold.jpg" alt="カビ汚れの外壁" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="entrance-after.jpg" alt="洗浄後の玄関タイル" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="work-cleaning.jpg" alt="手洗いで洗浄している様子" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="house-before.jpg" alt="洗浄前の戸建て" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="vent-closeup.jpg" alt="汚れのクローズアップ" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="apartment-after.jpg" alt="洗浄後のアパート" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="trial-clean.jpg" alt="お試し洗浄の様子" loading="lazy"></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener"><img src="top-after.jpg" alt="洗浄後の外壁" loading="lazy"></a>
       <!-- 2周目（シームレスループ用） -->
-      <img src="moss.jpg" alt="" aria-hidden="true">
-      <img src="wall-after.jpg" alt="" aria-hidden="true">
-      <img src="raindrip.jpg" alt="" aria-hidden="true">
-      <img src="entrance-before.jpg" alt="" aria-hidden="true">
-      <img src="mold.jpg" alt="" aria-hidden="true">
-      <img src="entrance-after.jpg" alt="" aria-hidden="true">
-      <img src="work-cleaning.jpg" alt="" aria-hidden="true">
-      <img src="house-before.jpg" alt="" aria-hidden="true">
-      <img src="vent-closeup.jpg" alt="" aria-hidden="true">
-      <img src="apartment-after.jpg" alt="" aria-hidden="true">
-      <img src="trial-clean.jpg" alt="" aria-hidden="true">
-      <img src="top-after.jpg" alt="" aria-hidden="true">
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="moss.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="wall-after.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="raindrip.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="entrance-before.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="mold.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="entrance-after.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="work-cleaning.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="house-before.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="vent-closeup.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="apartment-after.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="trial-clean.jpg" alt=""></a>
+      <a href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="top-after.jpg" alt=""></a>
     </div>
   </div>
 </section>
