@@ -441,6 +441,33 @@ body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
 }
 .insta-btn:hover{transform:translateY(-3px) scale(1.02);}
 
+/* ===== Instagramギャラリー（横スクロール） ===== */
+.insta-strip{background:var(--dark);padding:56px 0;overflow:hidden;}
+.insta-strip-head{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  max-width:1080px;margin:0 auto 30px;padding:0 5%;flex-wrap:wrap;
+}
+.insta-strip-head h3{
+  color:var(--yellow);font-size:clamp(17px,2.6vw,24px);font-weight:800;
+}
+.insta-strip-head h3 .sl{opacity:.5;margin:0 10px;font-weight:400;}
+.insta-follow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--yellow);color:var(--dark);font-weight:800;font-size:14px;
+  padding:11px 22px;border-radius:999px;white-space:nowrap;transition:transform .2s;
+}
+.insta-follow:hover{transform:translateY(-2px);}
+.insta-track-wrap{overflow:hidden;width:100%;}
+.insta-track{display:flex;gap:14px;width:max-content;animation:instaScroll 32s linear infinite;}
+.insta-track img{
+  width:220px;height:220px;object-fit:cover;border-radius:10px;flex:0 0 auto;
+  filter:brightness(.92);transition:filter .2s,transform .2s;
+}
+.insta-track img:hover{filter:brightness(1.05);transform:scale(1.03);}
+@keyframes instaScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media(max-width:640px){.insta-track img{width:150px;height:150px;}}
+@media (prefers-reduced-motion:reduce){.insta-track{animation:none;}}
+
 /* ===== 会社概要 ===== */
 .company{background:linear-gradient(180deg,#f3fbff,var(--bg-lb));}
 .company table{
@@ -842,6 +869,46 @@ footer .logo-f span{color:var(--lblue);}
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
       @gaiheki.loopz.kagoshima をフォロー
     </a>
+  </div>
+</section>
+
+<!-- ===== Instagramギャラリー（横スクロール） ===== -->
+<section class="insta-strip">
+  <div class="insta-strip-head">
+    <h3><span class="sl">＼</span>施工事例はInstagramでも更新中<span class="sl">／</span></h3>
+    <a class="insta-follow" href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener">
+      Follow Us
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+    </a>
+  </div>
+  <div class="insta-track-wrap">
+    <div class="insta-track">
+      <img src="moss.jpg" alt="コケで黒ずんだ外壁" loading="lazy">
+      <img src="wall-after.jpg" alt="洗浄後の外壁" loading="lazy">
+      <img src="raindrip.jpg" alt="雨だれで黒く筋になった外壁" loading="lazy">
+      <img src="entrance-before.jpg" alt="洗浄前の玄関タイル" loading="lazy">
+      <img src="mold.jpg" alt="カビ汚れの外壁" loading="lazy">
+      <img src="entrance-after.jpg" alt="洗浄後の玄関タイル" loading="lazy">
+      <img src="work-cleaning.jpg" alt="手洗いで洗浄している様子" loading="lazy">
+      <img src="house-before.jpg" alt="洗浄前の戸建て" loading="lazy">
+      <img src="vent-closeup.jpg" alt="汚れのクローズアップ" loading="lazy">
+      <img src="apartment-after.jpg" alt="洗浄後のアパート" loading="lazy">
+      <img src="trial-clean.jpg" alt="お試し洗浄の様子" loading="lazy">
+      <img src="top-after.jpg" alt="洗浄後の外壁" loading="lazy">
+      <!-- 2周目（シームレスループ用） -->
+      <img src="moss.jpg" alt="" aria-hidden="true">
+      <img src="wall-after.jpg" alt="" aria-hidden="true">
+      <img src="raindrip.jpg" alt="" aria-hidden="true">
+      <img src="entrance-before.jpg" alt="" aria-hidden="true">
+      <img src="mold.jpg" alt="" aria-hidden="true">
+      <img src="entrance-after.jpg" alt="" aria-hidden="true">
+      <img src="work-cleaning.jpg" alt="" aria-hidden="true">
+      <img src="house-before.jpg" alt="" aria-hidden="true">
+      <img src="vent-closeup.jpg" alt="" aria-hidden="true">
+      <img src="apartment-after.jpg" alt="" aria-hidden="true">
+      <img src="trial-clean.jpg" alt="" aria-hidden="true">
+      <img src="top-after.jpg" alt="" aria-hidden="true">
+    </div>
   </div>
 </section>
 
