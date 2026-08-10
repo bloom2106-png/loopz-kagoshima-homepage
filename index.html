@@ -132,7 +132,25 @@ body.menu-open .sp-menu{opacity:1;pointer-events:auto;}
   padding:120px 5% 140px;
   overflow:hidden;
 }
-.hero-inner{max-width:1080px;margin:0 auto;width:100%;position:relative;z-index:2;}
+.hero-inner{
+  max-width:1080px;margin:0 auto;width:100%;position:relative;z-index:2;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;
+}
+.hero-photo{position:relative;justify-self:center;width:100%;max-width:320px;}
+.hero-photo-card{
+  border-radius:20px;overflow:hidden;box-shadow:0 20px 46px rgba(10,70,105,.32);
+  border:4px solid rgba(255,255,255,.6);position:relative;
+}
+.hero-photo-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;}
+.hero-photo-tag{
+  position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);color:var(--blue);
+  font-weight:800;font-size:11px;letter-spacing:.08em;padding:6px 12px;border-radius:999px;z-index:2;
+}
+.hero-photo-tag.after{top:auto;bottom:14px;background:var(--yellow);color:var(--dark);}
+@media(max-width:840px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-photo{max-width:220px;margin:6px auto 0;}
+}
 .hero-copy .lead-en{
   font-family:"Montserrat","Arial",sans-serif;
   font-weight:800;letter-spacing:.2em;font-size:clamp(11px,1.6vw,15px);
@@ -623,10 +641,10 @@ footer .logo-f span{color:var(--lblue);}
   to{transform:scaleX(-1) translateY(9px) rotate(-2deg);}
 }
 .hero-chara-img{
-  position:absolute;right:5%;top:50%;transform:translateY(-50%);z-index:2;
-  width:clamp(180px,22vw,280px);
+  position:absolute;left:-16%;bottom:-8%;z-index:3;
+  width:clamp(120px,15vw,170px);
 }
-@media(max-width:840px){.hero-chara-img{width:130px;right:2%;top:auto;bottom:190px;}}
+@media(max-width:840px){.hero-chara-img{width:96px;left:-6%;bottom:-6%;}}
 .worry-chara-wrap{display:flex;justify-content:center;margin-top:14px;}
 .worry-chara-wrap img{width:100px;}
 .feature-card .chara-img{position:absolute;right:14px;bottom:10px;width:64px;opacity:.95;}
@@ -712,7 +730,6 @@ footer .logo-f span{color:var(--lblue);}
 <!-- ===== ヒーロー ===== -->
 <div class="hero" id="top">
   <div class="bubbles" id="bubbles"></div>
-  <img class="chara-img chara-float hero-chara-img" src="chara5.png" alt="" onerror="this.style.display='none'">
   <div class="hero-inner">
     <div class="hero-copy">
       <p class="lead-en">GAIHEKI CLEANING SPECIALIST — KAGOSHIMA</p>
@@ -721,15 +738,18 @@ footer .logo-f span{color:var(--lblue);}
         <span class="line"><span><span class="blue">塗り替える前に</span><span class="wave">「洗う」</span>という選択。</span></span>
       </h1>
       <p class="hero-sub">カビ・コケ・藻・雨染み——気になる外壁の黒ずみを、専用洗浄液とていねいな手洗い施工でリセット。<br>外壁洗浄専門店 鹿児島LOOPZ（ループス）が、お住まいに新築のような輝きを取り戻します。</p>
-      <div class="hero-badges">
-        <span class="badge">塗り替えに比べ費用を大幅カット</span>
-        <span class="badge">ループスオリジナル洗浄液</span>
-        <span class="badge">お見積り無料</span>
-      </div>
       <div class="hero-cta">
         <a class="cta-btn" href="#contact">無料でお見積り依頼</a>
         <a class="ghost" href="#features">LOOPZが選ばれる理由</a>
       </div>
+    </div>
+    <div class="hero-photo">
+      <div class="hero-photo-card">
+        <span class="hero-photo-tag">BEFORE</span>
+        <span class="hero-photo-tag after">AFTER</span>
+        <img src="trial-clean.jpg" alt="洗浄前後の外壁（1枚で比較）" loading="lazy">
+      </div>
+      <img class="chara-img chara-float hero-chara-img" src="chara5.png" alt="" onerror="this.style.display='none'">
     </div>
   </div>
   <div class="foam" id="foam" aria-hidden="true"></div>
