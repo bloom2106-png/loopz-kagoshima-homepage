@@ -1386,8 +1386,8 @@ const foam=document.getElementById('foam');
 if(foam){
   const bumps=[];
   // 奥の列（大きめ・薄め）と手前の列（小さめ・濃いめ）の2層
-  for(let i=0;i<12;i++)bumps.push({s:90+Math.random()*100,l:i/12*100+(Math.random()*6-3),b:-40-Math.random()*20,o:.75});
-  for(let i=0;i<16;i++)bumps.push({s:44+Math.random()*70,l:i/16*100+(Math.random()*5-2.5),b:-14-Math.random()*14,o:1});
+  for(let i=0;i<20;i++)bumps.push({s:90+Math.random()*100,l:i/20*100+(Math.random()*5-2.5),b:-40-Math.random()*20,o:.75});
+  for(let i=0;i<28;i++)bumps.push({s:40+Math.random()*66,l:i/28*100+(Math.random()*4-2),b:-14-Math.random()*14,o:1});
   bumps.forEach(v=>{
     const d=document.createElement('div');
     d.className='foam-bump';
