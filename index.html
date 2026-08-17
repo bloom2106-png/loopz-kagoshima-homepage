@@ -718,15 +718,20 @@ footer .logo-f span{color:var(--lblue);}
   display:flex;flex-direction:column;gap:12px;
 }
 .fixed-side a{
-  width:58px;height:58px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
+  width:168px;height:52px;border-radius:999px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
   box-shadow:0 8px 20px rgba(0,0,0,.22);
-  color:#fff;font-size:26px;transition:transform .2s;
+  color:#fff;font-size:14px;font-weight:800;transition:transform .2s;
 }
-.fixed-side a:hover{transform:scale(1.08);}
+.fixed-side a svg{flex:0 0 auto;width:22px;height:22px;}
+.fixed-side a:hover{transform:scale(1.05);}
 .fixed-side .fs-insta{background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7);}
 .fixed-side .fs-line{background:#06c755;}
-@media(max-width:840px){.fixed-side{right:14px;bottom:82px;}.fixed-side a{width:50px;height:50px;font-size:22px;}}
+@media(max-width:840px){
+  .fixed-side{right:14px;bottom:82px;}
+  .fixed-side a{width:150px;height:46px;font-size:12.5px;}
+  .fixed-side a svg{width:19px;height:19px;}
+}
 
 @media(max-width:840px){
   nav.pc,header .cta-btn{display:none;}
@@ -1313,11 +1318,13 @@ footer .logo-f span{color:var(--lblue);}
 </footer>
 
 <div class="fixed-side">
-  <a class="fs-line" href="https://line.me/R/ti/p/@550nkhft" target="_blank" rel="noopener" aria-label="公式LINE">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.69 2 10.2c0 4.03 3.54 7.4 8.32 8.05.32.07.76.21.87.49.1.25.06.65.03.9l-.14.85c-.04.25-.19.98.86.54s5.65-3.33 7.71-5.7C21.09 13.5 22 11.94 22 10.2 22 5.69 17.52 2 12 2z"/></svg>
+  <a class="fs-line" href="https://line.me/R/ti/p/@550nkhft" target="_blank" rel="noopener" aria-label="LINEお友達登録">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.69 2 10.2c0 4.03 3.54 7.4 8.32 8.05.32.07.76.21.87.49.1.25.06.65.03.9l-.14.85c-.04.25-.19.98.86.54s5.65-3.33 7.71-5.7C21.09 13.5 22 11.94 22 10.2 22 5.69 17.52 2 12 2z"/></svg>
+    LINEお友達登録
   </a>
-  <a class="fs-insta" href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-label="Instagram">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+  <a class="fs-insta" href="https://www.instagram.com/gaiheki.loopz.kagoshima/" target="_blank" rel="noopener" aria-label="Instagramをフォロー">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+    フォローする
   </a>
 </div>
 
