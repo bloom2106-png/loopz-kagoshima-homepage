@@ -1355,12 +1355,17 @@ document.querySelectorAll('.sp-menu a').forEach(a=>a.addEventListener('click',()
 const bw=document.getElementById('bubbles');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(!reduce){
-  for(let i=0;i<44;i++){
+  for(let i=0;i<80;i++){
     const b=document.createElement('div');
     b.className='bubble';
     const s=6+Math.random()*58;
     b.style.width=b.style.height=s+'px';
-    b.style.left=Math.random()*100+'%';
+    const left=Math.random()*100;
+    b.style.left=left+'%';
+    // U字：中央は低く、左右端に近づくほど高い位置からスタート
+    const edge=Math.pow((left-50)/50,2);
+    const base=-120+edge*300+(Math.random()*60-30);
+    b.style.bottom=base+'px';
     const r=Math.random();
     if(r<.3)b.classList.add('tint');else if(r<.45)b.classList.add('ring');
     b.style.animationName=Math.random()<.5?'floatUp':'floatUpB';
